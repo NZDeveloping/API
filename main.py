@@ -16,11 +16,14 @@ import aiohttp
 import discord
 import urllib.request
 import asyncio
+from dotenv import load_dotenv
+
+load_dotenv()
+BOT_TOKEN = os.getenv('BOT_TOKEN')
+OAUTH2_CLIENT_SECRET = os.getenv('OAUTH2_CLIENT_SECRET')
 
 # Bot Configuration
 OAUTH2_CLIENT_ID = '1311057398328459374'
-OAUTH2_CLIENT_SECRET = 'Ex9SIpcii6JYEJv_-PmktvBGskdRiETx'
-BOT_TOKEN = 'MTMxMTA1NzM5ODMyODQ1OTM3NA.G5_H2X._jb-TZWZ9iwXmlL72rLvjyP4wIhESv0fxDNcmw'
 
 # Flask App Setup
 app = Flask(__name__)
